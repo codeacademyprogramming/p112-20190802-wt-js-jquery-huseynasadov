@@ -40,15 +40,38 @@ $(document).ready(function () {
         divCard1 = $("<div></div>").addClass("card h-100"),
         divCard2 = $("<div></div>").addClass("card h-100"),
         divCard3 = $("<div></div>").addClass("card h-100"),
-        divCard4 = $("<div></div>").addClass("card h-100")
+        divCard4 = $("<div></div>").addClass("card h-100"),
+        imgCards1 = $("<img>").addClass("card-img-top").attr("src", "http://placehold.it/500x325"),
+        imgCards2 = $("<img>").addClass("card-img-top").attr("src", "http://placehold.it/500x325"),
+        imgCards3 = $("<img>").addClass("card-img-top").attr("src", "http://placehold.it/500x325"),
+        imgCards4 = $("<img>").addClass("card-img-top").attr("src", "http://placehold.it/500x325"),
+        divCardBody1 = $("<div></div>").addClass("card-body"),
+        divCardBody2 = $("<div></div>").addClass("card-body"),
+        divCardBody3 = $("<div></div>").addClass("card-body"),
+        divCardBody4 = $("<div></div>").addClass("card-body"),
+        divCardFooter1 = $("<div></div>").addClass("card-footer"),
+        divCardFooter2 = $("<div></div>").addClass("card-footer"),
+        divCardFooter3 = $("<div></div>").addClass("card-footer"),
+        divCardFooter4 = $("<div></div>").addClass("card-footer"),
+        h4Card1 = $("<h4></h4>").addClass("card-title").text("Card title"),
+        h4Card2 = $("<h4></h4>").addClass("card-title").text("Card title"),
+        h4Card3 = $("<h4></h4>").addClass("card-title").text("Card title"),
+        h4Card4 = $("<h4></h4>").addClass("card-title").text("Card title"),
+        aCard1 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
+        aCard2 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
+        aCard3 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
+        aCard4 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
+        pCard1 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
+        pCard2 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
+        pCard3 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
+        pCard4 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.")
 
 
 
 
+    //Content Head - Header - Nav
 
-        //Content Head - Header - Nav
-
-        $("head title").text("Only JQuery");
+    $("head title").text("Only JQuery");
     $("head").append('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">');
     $("body").prepend(header, main, footer);
     header.append(
@@ -80,22 +103,38 @@ $(document).ready(function () {
                 )
             )
         ),
-        // Content Section - Cards
+        //Section - Cards
         sectionCards.append(
             divContCards.append(
                 divRowCards.append(
                     divColCard1.append(
-                        divCard1
+                        divCard1.append(
+                            imgCards1,
+                            divCardBody1.append(h4Card1, pCard1),
+                            divCardFooter1.append(aCard1)
+                        )
                     ),
                     divColCard2.append(
-                        divCard2
+                        divCard2.append(
+                            imgCards2,
+                            divCardBody2.append(h4Card2, pCard2),
+                            divCardFooter2.append(aCard2)
+                        )
                     ),
                     divColCard3.append(
-                        divCard3
+                        divCard3.append(
+                            imgCards3,
+                            divCardBody3.append(h4Card3, pCard3),
+                            divCardFooter3.append(aCard3)
+                        )
                     ),
                     divColCard4.append(
-                        divCard4
-                    ),
+                        divCard4.append(
+                            imgCards4,
+                            divCardBody4.append(h4Card4, pCard4),
+                            divCardFooter4.append(aCard4)
+                        )
+                    )
                 )
             )
         )
