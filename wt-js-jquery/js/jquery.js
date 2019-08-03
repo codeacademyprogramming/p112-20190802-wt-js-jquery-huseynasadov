@@ -5,13 +5,13 @@ $(document).ready(function () {
 
     let header = $("<header></header>"),
         main = $("<main></main>"),
-        footer = $("<footer></footer>"),
+        footer = $("<footer></footer>").addClass("py-5 bg-dark"),
         // nav
         nav = $("<nav></nav>").addClass("navbar navbar-expand-lg navbar-dark bg-dark fixed-top"),
         divContainerNav = $("<div></div>").addClass("container"),
         aNavbar = $("<a></a>").addClass("navbar-brand").text("Start Bootstrap").attr("href", "#"),
-        divNavbar = $("<div></div>").addClass("collapse navbar-collapse"),
-        toggleNavbar = $("<button></button>").addClass("navbar-toggler").attr("type", "button"),
+        divNavbar = $("<div></div>").addClass("collapse navbar-collapse").attr("id", "navbarToggler"),
+        toggleNavbar = $("<button></button>").addClass("navbar-toggler collapsed").attr({ "type": "button", "data-toggle": "collapse", "data-target": "#navbarToggler" }),
         ulNavbar = $("<ul><ul>").addClass("navbar-nav ml-auto"),
         liHome = $("<li></li>").addClass("nav-item active"),
         liAbout = $("<li></li>").addClass("nav-item"),
@@ -22,7 +22,7 @@ $(document).ready(function () {
         aServices = $("<a></a>").addClass("nav-link").attr("href", "#").text("Services"),
         aContact = $("<a></a>").addClass("nav-link").attr("href", "#").text("Contact"),
         //section - jumbotron
-        sectionJumb = $("<section></section>").attr("id", "section-jumbotron"),
+        sectionJumb = $("<section></section>").attr("id", "section-jumbotron").addClass("mt-4 pt-4"),
         spanToggle = $("<span></span>").addClass("navbar-toggler-icon"),
         divContJumb = $("<div></div>").addClass("container"),
         divJumb = $("<div></div>").addClass("jumbotron my-4"),
@@ -62,12 +62,11 @@ $(document).ready(function () {
         aCard3 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
         aCard4 = $("<a></a>").addClass("btn btn-primary").attr("href", "#").text("Find Out More!"),
         pCard1 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
-        pCard2 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
+        pCard2 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto."),
         pCard3 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque."),
-        pCard4 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.")
-
-
-
+        pCard4 = $("<p></p>").addClass("card-text").text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto."),
+        //footer
+        pFooter = $("<p></p>").addClass("text-center text-white").text("Copyright © Your Website 2019");
 
     //Content Head - Header - Nav
 
@@ -78,14 +77,14 @@ $(document).ready(function () {
         nav.append(
             divContainerNav.append(
                 aNavbar,
+                toggleNavbar.append(spanToggle),
                 divNavbar.append(
                     ulNavbar.append(
                         liHome.append(aHome),
                         liAbout.append(aAbout),
                         liServices.append(aServices),
                         liContact.append(aContact)
-                    )),
-                toggleNavbar.append(spanToggle)
+                    ))
             )
         )
     );
@@ -138,5 +137,9 @@ $(document).ready(function () {
                 )
             )
         )
-    )
+    );
+
+    //Content Footer
+
+    footer.append(pFooter);
 });
