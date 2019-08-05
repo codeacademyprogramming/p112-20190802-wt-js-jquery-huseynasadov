@@ -84,7 +84,8 @@ $(document).ready(function () {
                         liAbout.append(aAbout),
                         liServices.append(aServices),
                         liContact.append(aContact)
-                    ))
+                    )
+                )
             )
         )
     );
